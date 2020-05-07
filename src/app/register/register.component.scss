@@ -1,0 +1,106 @@
+$base-color:#f8f8f8;
+$font-color:#161c2d;
+$form-color:#fff;
+$warning:#e85969;
+$button-warning:#fd0e35;
+$border:#eaeaea;
+$disabled:#588da8;
+$light-font:#b8bfc6;
+$button-border:#535e6c;
+$shadow:#f9e5e1;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  background-color: $base-color;
+  width: 100%;
+  height: 100vh;
+
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    padding: 30px 20px;
+    background-color: $form-color;
+    border: 2px solid $border;
+    color: $font-color;
+    border-radius: 5px;
+    box-shadow: 0px 1.5px #eeeeee;
+
+    h1 {
+      text-align: center;
+      font-family: 'Roboto';
+      font-weight: 900;
+      font-size: 26px
+    }
+
+    .form-control {
+      border: none;
+      margin-top: 20px;
+      height: 70px;
+
+      input {
+        border: none;
+        font-family: 'poppins';
+
+        &::placeholder {
+          color: $light-font;
+          font-family: 'poppins'
+        }
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        font-family: 'poppins'
+      }
+
+      .input-container {
+        height: 42px;
+        border: 1px solid $border;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+
+        input {
+          width: 85%;
+          margin-left: 15px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .sign-btn {
+        background-color: $button-warning;
+        width: calc(100% - 55%);
+        color: $form-color;
+        border: none;
+        border-radius: 7px;
+        padding: 10px 0;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'poppins';
+      }
+    }
+  }
+}
